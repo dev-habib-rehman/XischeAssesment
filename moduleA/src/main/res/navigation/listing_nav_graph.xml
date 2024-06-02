@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listing_nav_graph"
+    app:startDestination="@id/universitiesListingFragment">
+
+    <fragment
+        android:id="@+id/universitiesListingFragment"
+        android:name="com.example.modulea.ui.UniversitiesListingFragment"
+        android:label="fragment_universities_listing"
+        tools:layout="@layout/fragment_universities_listing">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="android-app://com.example.modulea/refresh/{id}" />
+    </fragment>
+</navigation>

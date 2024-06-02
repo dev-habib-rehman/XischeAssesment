@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.UniversityDetailsFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.moduleb.viewmodel.UniversityDetailsVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+        
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRefreshUniversityDetails"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/baseline_autorenew_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameUniversityDetails"
+            style="@style/TextAppearance.Material3.HeadlineSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@{viewModel.universityData.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnRefreshUniversityDetails"
+            tools:text="University Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStateUniversityDetails"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@{viewModel.universityData.stateProvince}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameUniversityDetails"
+            tools:text="University State" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountryUniversityDetails"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@{viewModel.universityData.country}"
+            app:layout_constraintEnd_toStartOf="@id/tvCodeUniversityDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStateUniversityDetails"
+            tools:text="University Country" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWebsiteUniversityDetails"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.universityData.country}"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCountryUniversityDetails"
+            tools:text="University website" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCodeUniversityDetails"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.universityData.alphaTwoCode}"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCountryUniversityDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvCountryUniversityDetails"
+            app:layout_constraintTop_toTopOf="@+id/tvCountryUniversityDetails"
+            tools:text="University Code" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
