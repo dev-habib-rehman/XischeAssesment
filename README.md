@@ -14,6 +14,8 @@ This is a Kotlin-based Android application that displays a list of universities 
 - Modular architecture with separate modules for different functionalities.
 - Deep linking support for navigation between modules.
 
+**Clone the repository:**
+   git clone https://github.com/habi377/XischeAssesment.git
 
 ## Architecture 
 
